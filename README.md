@@ -598,3 +598,8 @@ Please, make sure all steps are using **the same** python version and that you h
 ## License
 
 [License](LICENSE.txt)
+
+
+## 📄 Submission Notes
+- W&B Project Link: [https://wandb.ai/satyaboya-n-a/nyc_airbnb](https://wandb.ai/satyaboya-n-a/nyc_airbnb)
+- GitHub Repo Link: [https://github.com/sboyapati94/build-ml-pipeline-for-short-term-rental-prices](https://github.com/sboyapati94/build-ml-pipeline-for-short-term-rental-prices)
