@@ -44,7 +44,7 @@ def go(config: DictConfig):
                 env_manager="conda",
                 parameters={
                     "sample": config["etl"]["sample"],
-                    "artifact_name": "sample.csv",
+                    "artifact_name": config["etl"]["artifact_name"],
                     "artifact_type": "raw_data",
                     "artifact_description": "Raw file as downloaded"
                 },
@@ -55,12 +55,16 @@ def go(config: DictConfig):
                 os.path.join(hydra.utils.get_original_cwd(), "src", "basic_cleaning"),
                 "main",
                 parameters={
-                "input_artifact": "sample.csv:latest",
+                "input_artifact": "sample2.csv:latest",
                 "output_artifact": "clean_sample.csv",
                 "output_type": "clean_sample",
                 "output_description": "Data with outliers and null values removed",
                 "min_price": config['etl']['min_price'],
-                "max_price": config['etl']['max_price']
+                "max_price": config['etl']['max_price'],
+                "min_longitude": config['etl']['min_longitude'],
+                "max_longitude": config['etl']['max_longitude'],
+                "min_latitude": config['etl']['min_latitude'],
+                "max_latitude": config['etl']['max_latitude']
                 },
             )
             pass

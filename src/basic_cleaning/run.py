@@ -18,9 +18,18 @@ def go(args):
     logger.info("Reading dataset")
     df = pd.read_csv(artifact_path)
 
+    #logger.info(f"Filtering rows with price not in [{args.min_price}, {args.max_price}]")
+    #idx = df["price"].between(args.min_price, args.max_price)
+    #df = df[idx].copy()
+
+    logger.info("Filtering rows with invalid geolocation")
+    idx_geo = df["longitude"].between(args.min_longitude, args.max_longitude) & \
+            df["latitude"].between(args.min_latitude, args.max_latitude)
+    df = df[idx_geo].copy()
+
     logger.info(f"Filtering rows with price not in [{args.min_price}, {args.max_price}]")
-    idx = df["price"].between(args.min_price, args.max_price)
-    df = df[idx].copy()
+    idx_price = df["price"].between(args.min_price, args.max_price)
+    df = df[idx_price].copy()
 
     logger.info("Dropping rows with missing values")
     df.dropna(inplace=True)
@@ -46,6 +55,10 @@ if __name__ == "__main__":
     parser.add_argument("--output_description", type=str, required=True)
     parser.add_argument("--min_price", type=float, required=True)
     parser.add_argument("--max_price", type=float, required=True)
+    parser.add_argument("--min_longitude", type=float, required=True)
+    parser.add_argument("--max_longitude", type=float, required=True)
+    parser.add_argument("--min_latitude", type=float, required=True)
+    parser.add_argument("--max_latitude", type=float, required=True)
 
     args = parser.parse_args()
     go(args)

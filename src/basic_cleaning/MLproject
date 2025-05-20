@@ -27,6 +27,22 @@ entry_points:
       max_price:
         description: Maximum price threshold
         type: float
+      
+      min_longitude:
+        description: Minimum allowed longitude
+        type: float
+
+      max_longitude:
+        description: Maximum allowed longitude
+        type: float
+
+      min_latitude:
+        description: Minimum allowed latitude
+        type: float
+
+      max_latitude:
+        description: Maximum allowed latitude
+        type: float
 
     command: >
       python run.py 
@@ -36,3 +52,7 @@ entry_points:
       --output_description {output_description}
       --min_price {min_price}
       --max_price {max_price}
+      --min_longitude {min_longitude}
+      --max_longitude {max_longitude}
+      --min_latitude {min_latitude}
+      --max_latitude {max_latitude}
