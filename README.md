@@ -6,6 +6,9 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
+## Please check the wandb_final project_screenshot.png in the /images directory for the pipeline picture from wandb. 
+## Since wandb removed the personal account, I cannot make my account public any longer. Hence sharing the screnshot.
+
 ## Table of contents
 
 - [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
