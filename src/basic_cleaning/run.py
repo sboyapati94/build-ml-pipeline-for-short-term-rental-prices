@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 def go(args):
     #run = wandb.init(project="nyc_airbnb", group="data_cleaning", job_type="data_cleaning", save_code=True)
-    run = wandb.init(project="nyc_airbnb", group="eda", job_type="eda", save_code=True)
+    run = wandb.init(project="nyc_airbnb", entity="udacity_nyc_project", group="eda", job_type="eda", save_code=True)
     run.config.update(args)
 
     logger.info("Downloading artifact from W&B")

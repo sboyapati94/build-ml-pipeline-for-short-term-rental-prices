@@ -6,9 +6,6 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
-## Please check the wandb_final project_screenshot.png in the /images directory for the pipeline picture from wandb. 
-## Since wandb removed the personal account, I cannot make my account public any longer. Hence sharing the screnshot.
-
 ## Table of contents
 
 - [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
@@ -604,5 +601,5 @@ Please, make sure all steps are using **the same** python version and that you h
 
 
 ## 📄 Submission Notes
-- W&B Project Link: [https://wandb.ai/satyaboya-n-a/nyc_airbnb](https://wandb.ai/satyaboya-n-a/nyc_airbnb)
+- W&B Project Link: [https://wandb.ai/udacity_nyc_project/nyc_airbnb/artifacts/](https://wandb.ai/udacity_nyc_project/nyc_airbnb/artifacts/)
 - GitHub Repo Link: [https://github.com/sboyapati94/build-ml-pipeline-for-short-term-rental-prices](https://github.com/sboyapati94/build-ml-pipeline-for-short-term-rental-prices)
